@@ -1,0 +1,19 @@
+type Query {
+    getStudents: [Student]
+    studentById(id: ID): Student
+    addStudent(student: StudentInput): Student
+    updateStudentById(id: ID, student: StudentInput): Student
+    deleteStudentById(id: ID) : String
+
+}
+
+type Student {
+    id: ID
+    name: String
+    email: String
+}
+
+input StudentInput {
+    name: String!
+    email: String!
+}
